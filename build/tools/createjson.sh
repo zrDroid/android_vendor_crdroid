@@ -52,6 +52,7 @@ fi
 
 # Generate JSON fields
 FILENAME=$3
+VARIANT=$(echo "$3" | cut -d'-' -f7 | sed 's/.zip//')
 VERSION=$(echo "$3" | cut -d'-' -f5 | sed 's/v//')
 V_MAX=$(echo "$VERSION" | cut -d'.' -f1)
 V_MIN=$(echo "$VERSION" | cut -d'.' -f2)
@@ -74,7 +75,7 @@ cat <<EOF >$output
             "oem": "${OEM:-}",
             "device": "${DEVICE:-}",
             "filename": "$FILENAME",
-            "download": "https://sourceforge.net/projects/crdroid/files/$1/$V_MAX.x/$3/download",
+            "download": "https://ota.zelleb.de/$1/$3",
             "timestamp": $TIMESTAMP,
             "md5": "$MD5",
             "sha256": "$SHA256",
