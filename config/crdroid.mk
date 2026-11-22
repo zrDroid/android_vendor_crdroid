@@ -45,7 +45,6 @@ PRODUCT_PACKAGES += \
     AxSandbox \
     AxThemeStore \
     BatteryStatsViewer \
-    GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
     OmniJaws \
